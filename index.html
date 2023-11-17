@@ -5,14 +5,110 @@
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
      <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="swup.css">
+     <link rel="shortcut icon" href="favicon.ico">
      <title>Wild Sage Weddings</title>
 </head>
-<body>
-<h1>Hello world!</h1>
+<body class="sage">
+    <nav class="navbar text-center darksage">
+        <div class="container-fluid px-md-3 py-0 position-relative">
+            <div id="mNav" class="col-2 d-md-none darksage">
+                <div class="d-sm-none">
+                    <img src="assets/icons8-nav.png" alt="navbar" class="nav-burger p-2" onclick="openNav()">
+                    <img src="assets/icons8-circled-x-50.png" alt="close navbar" class="nav-burger nav-close p-2" onclick="openNav()">
+                </div>
+                <div class="d-none d-sm-inline-block">  
+                    <img src="assets/icons8-nav-75.png" alt="navbar" class="nav-burger p-2" onclick="openNav()">
+                    <img src="assets/icons8-circled-x-75.png" alt="close navbar" class="nav-burger nav-close p-2" onclick="openNav()">
+                </div>
+            </div>
+            <a class="navlink px-md-2 py-md-5 col text-reset d-md-inline-block d-none " href="./index.html">HOME</a>
+            <a class="navlink px-md-2 py-md-5 col text-reset d-md-inline-block d-none " href="./about.html">ABOUT</a>
+            <a class="navlink px-md-2 py-md-5 col text-reset d-md-inline-block d-none " href="./details.html">DETAILS</a>
+            <a class="navbar-brand px-md-2 col-md-2 col-10 offset-1 offset-md-0 flex-md-fill" href="./index.html"><img src="assets/logo.png" alt="WildSageWeddingsLogo.png" class="logo" /></a>
+            <a class="navlink px-md-2 py-md-5 col text-reset d-md-inline-block d-none " href="./portfolio.html" id="portfolio">PORT<span class="d-md-inline-block">FOLIO</span></a>
+            <a class="navlink px-md-2 py-md-5 col text-reset d-md-inline-block d-none " href="./journal.html">JOURNAL</a>
+            <a class="navlink px-md-2 py-md-5 col text-reset d-md-inline-block d-none " href="./contact.html">CONNECT</a>
+            
+            <div id="mNavMenu" class="text-center d-md-none row row-cols-1 darksage closed-menu d-none">
+                <a class="navlink p-5 col-12 text-reset " href="./index.html">HOME</a>
+                <a class="navlink p-5 col-12 text-reset " href="./about.html">ABOUT</a>
+                <a class="navlink p-5 col-12 text-reset " href="./details.html">DETAILS</a>
+                <a class="navbar-brand p-3 order-first"href="./index.html" ><img src="assets/logo.png" alt="WildSageWeddingsLogo.png" class="mNav-Logo" /></a>
+                <a class="navlink p-5 col-12 text-reset " href="./portfolio.html" id="portfolio">PORT<span class="d-md-inline-block">FOLIO</span></a>
+                <a class="navlink p-5 col-12 text-reset " href="./journal.html">JOURNAL</a>
+                <a class="navlink p-5 col-12 text-reset " href="./contact.html">CONNECT</a>    
+            </div>
+        </div>
+    </nav>
+<div>
+    <div id="blank" class="darksage blank first-blank d-none d-sm-inline-block d-xl-none"></div>
+    <div id="blankL" class="darksage blank first-blank d-none d-xl-inline-block"></div>
+    <div id="blank2" class="darksage blank second-blank d-none d-md-inline-block d-xl-none"></div>
+    <div id="blank2L" class="darksage blank second-blank d-none d-xl-inline-block"></div>
+    <div id="blank3" class="darksage blank third-blank d-none d-sm-inline-block d-md-none"></div>
+    <div id="blankS" class="darksage blank first-blank d-sm-none"></div>
+    <div id="blank4" class="darksage blank second-blank d-inline-block d-sm-none" ></div>
+</div>
+<main id="swup" class="transition-fade">
+<div id="modal" class="justify-content-center" onclick="closeModal()">
+    <div id="modal-content align-items-center ">
+        <img src="" alt="popup-image" id="modal-img"  onclick="closeModal()"/>
+    </div>
+</div>
+    
+<div id="greetings" class="row mx-0 p-0 p-md-3 justify-content-center align-items-end container-fluid mt-5">
+    <div class="col-11 col-sm-10 col-md-6">
+        <img id="image1" class="img-fluid main-img1 img-bordered" src="assets/buttrams-2.jpg" alt="wedding1" onclick="popupImg(this)">
+    </div>
+    <div class="col-md-6 col-12">
+        <div class="row row-cols-1">
+            <p class="col-12 text-center heading fw-semibold">HI THERE!</p>
+            <p id="paragraph1" class="col-10 offset-1 col-md-12 offset-md-0 px-md-5 mb-md-0 mb-5 text-center lh-lg fw-light p1">Have you just said yes to the person of your dreams?! Are you over the moon excited but now that the high of engagement has subsided you're unsure of where to begin? You've landed in the right place then! We are here to bring your dreams to life. From the very first consultation to your grand exit, our priority is to make you feel the center of attention and that you're visions are our visions.</p>
+            <div class="col-12 order-first order-md-last mb-5 mb-md-0 mt-3 mt-md-0">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <img src="assets/buttramdetails-12.jpg" alt="buttramdetails12" class="img-fluid img-bordered main-img2" onclick="popupImg(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<div id="card2" class="text-center mt-md-5 mt-3 lh-lg">
+    <p class="heading col-md-6 offset-md-3 col-10 offset-1 px-5 pd-5 pt-0 p-md-0 fw-semibold">
+        TIMELESSLY DESIGNED WEDDING PLANNING AND COORDINATION
+    </p>
+    <div id="paragraph2" class=" col-md-6 offset-md-3 col-10 offset-1 px-5 pb-5 pt-3 p-md-0 fw-light p1">
+        we offer options to help fit every budget and every couple. packages are thoughtfully created, but there are options to customize the packages to fit your individual needs.
+    </div>
+    <div id="btn" class="container-fluid mt-5 justify-content-center">
+        <button id="learn" class="my-md-5 col-md-4 col-10 col-sm-6 p1">learn more</button>
+    </div>
+</div>
+<div>
+    <img src="assets/butchers05.jpg" alt="butchers05" id="faded-img" class="img-nonbordered img-fluid" onclick="popupImg(this)">
+</div>
 
+</main>
 
-    <script src="main.js"></script>
+<footer class="pt-3 pd-0 px-3 text-center row align-items-center justify-content-between darksage" style="margin: auto;">
+        <div class="col-md-4 col-12 order-2 order-md-1">
+            <div id="social-media" class="row justify-content-md-center justify-content-center mt-md-0 mt-3">
+                <a class="col-3 p-3"><img src="assets/icons8-facebook.png" alt="facebook"></a>
+                <a class="col-3 p-3"><img src="assets/icons8-instagram.png" alt="instagram"></a>
+                <a class="col-3 p-3"><img src="assets/icons8-up-arrow.png" alt="back to top"></a>
+            </div>
+        </div>    
+        <img src="assets/logo.png" alt="logo" class="img-fluid col-md-3 col-12 p-md-5 px-5 order-1 order-md-2">
+        <div id="email" class="col-md-4 col-12 text-break order-3 my-5 p1"><span class="d-inline-block">INFO</span><span class="d-inline-block">@WILDSAGE</span><span class="d-inline-block">WEDDINGS</span><span class="d-inline-block">.COM</span></div>
+</footer>
+<div id="copyright" class="col-12 order-last sage text-center p2"><span class="d-inline-block d-md-none">&#8226</span> Site designed by <a href="https://manueldominguez1113.github.io/" class="text-reset"> Manuel Dominguez</a> <br class="d-inline-block d-md-none">&#8226 Images courtesy/copyright of <a href="https://alyssaspiveyphoto.com/" class="text-reset">Alyssa Spivey Photography</a> <br class="d-inline-block d-md-none"> &#8226 Icons by <a target="_blank" href="https://icons8.com" class="text-reset">Icons8</a></div>
+
+    <script src="https://unpkg.com/swup@4"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="swup.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
