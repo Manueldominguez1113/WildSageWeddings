@@ -1,0 +1,4 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/HOME/WILDSAGE/PUBLIC_HTML

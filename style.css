@@ -1,20 +1,124 @@
+@font-face {
+    font-family: Allura;
+    src: url(assets/Fonts/allura/Allura-Regular.ttf);
+}
+@font-face {
+    font-family: Cantarell;
+    src: url(assets/Fonts/Cantarell/Cantarell-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Cantarell;
+    src: url(assets/Fonts/Cantarell/Cantarell-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: Cantarell;
+    src: url(assets/Fonts/Cantarell/Cantarell-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Cantarell;
+    src: url(assets/Fonts/Cantarell/Cantarell-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: Cormorant;
+    src: url(assets/Fonts/Cormorant/static/Cormorant-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Cormorant;
+    src: url(assets/Fonts/Cormorant/static/Cormorant-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: Cormorant;
+    src: url(assets/Fonts/Cormorant/static/Cormorant-Light.ttf);
+    font-weight: light;
+    font-style: normal;
+}
+@font-face {
+    font-family: Cormorant;
+    src: url(assets/Fonts/Cormorant/static/Cormorant-LightItalic.ttf);
+    font-weight: light;
+    font-style: italic;
+}
+@font-face {
+    font-family: Cormorant;
+    src: url(assets/Fonts/Cormorant/static/Cormorant-Medium.ttf);
+    font-weight: medium;
+    font-style: normal;
+}
+@font-face {
+    font-family: Cormorant;
+    src: url(assets/Fonts/Cormorant/static/Cormorant-MediumItalic.ttf);
+    font-weight: medium;
+    font-style: italic;
+}
+@font-face {
+    font-family: Cormorant;
+    src: url(assets/Fonts/Cormorant/static/Cormorant-SemiBold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Cormorant;
+    src: url(assets/Fonts/Cormorant/static/Cormorant-SemiBoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: Cormorant;
+    src: url(assets/Fonts/Cormorant/static/Cormorant-Bold.ttf);
+    font-weight: bolder;
+    font-style: normal;
+}
+@font-face {
+    font-family: Cormorant;
+    src: url(assets/Fonts/Cormorant/static/Cormorant-BoldItalic.ttf);
+    font-weight: bolder;
+    font-style: italic;
+}
+
+:root{
+    --main-color: #e0d9c7;
+    --secondary-color: #efe3d7;
+    --font-color:  #AB8763;
+    --font-color2:  #8a6d50;
+    --btn-bg-color: #b26770;
+    --btn-ft-color: white;
+    --cursive-ft: Allura;
+    --main-ft: Cantarell;
+    --head-ft-size: 24px;
+    --p-ft-size: 16px;
+    --nav-ft-size:14px;
+    --secondary-ft: Cormorant;
+    --about-main-ft: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 .darksage{
-    background-color: #e0d9c7;
+    background-color: var(--main-color);
 }
 .sage{
-    background-color: #efe3d7;
+    background-color: var(--secondary-color);
 }
 body{
-
-    color: #AB8763;
+    color:var(--font-color);
 }
 #copyright a{
-    color: #8a6d50;
+    color: var(--font-color2);
 }
 nav div a{
     position: relative;
     text-decoration: none;
-    color: #AB8763;
+    color: var(--font-color);
 }
 #email{
     letter-spacing: 4px;
@@ -23,9 +127,9 @@ nav div a{
     margin-bottom: 100px;
 }
 #learn{
-    background-color: #b26770; 
+    background-color: var(--btn-bg-color); 
     border: none;
-    color: white;
+    color: var(--btn-ft-color);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -62,7 +166,7 @@ nav div a{
     position: fixed;
     top: 0;
     left: 0;
-    border: 1px solid #AB8763;
+    border: 1px solid var(--font-color);
     border-bottom-right-radius: 10%;
 }
 .mNav-Logo{
@@ -113,6 +217,19 @@ nav div a{
 #social-media a{
     transition: 0.25s;
 }
+.fancy{
+    font-family: var(--cursive-ft);
+}
+.main-ft{
+    font-family: var(--main-ft);
+}
+.abt-ft{
+    font-family: var(--about-main-ft);
+}
+.secondary-ft{
+    font-family: var(--secondary-ft);
+}
+
 @media screen and (min-width:2000px) {
     nav div a{
         font-size: 2rem;
@@ -137,6 +254,7 @@ nav div a{
         width: 290px;
         height: 290px;
     }
+    
 }
 @media screen and (min-width:1150px) and (max-width:2000px){
     nav div a{
@@ -144,6 +262,9 @@ nav div a{
     }
     #portfolio{
         font-size: 16px;
+     }
+    #greetings .heading{
+        font-size: 2.25rem;
     }
     .heading{
         font-size: 1.25rem;
@@ -185,7 +306,7 @@ nav div a{
         position: relative;
     }
     p.heading{
-        letter-spacing: 4.0px;
+        letter-spacing: 6.0px;
     }
     #paragraph1,#paragraph2{
         letter-spacing: 2px;
@@ -208,7 +329,7 @@ nav div a{
     .blank{
         content: "";
         position: absolute;
-        background-color: #e0d9c7;
+        background-color: var(--main-color);
         z-index: -1;
     }
     .first-blank{
@@ -226,11 +347,11 @@ nav div a{
     }
 
     .main-img1{
-        border: solid #efe3d7;
-        border-width: 20px 30px; 
+        border: solid var(--secondary-color);
+        border-width: 45px 30px; 
     }
     .main-img2{
-        border: solid #efe3d7;
+        border: solid var(--secondary-color);
         border-width: 20px 40px; 
     }
     .navlink+.navlink::before{
@@ -239,7 +360,7 @@ nav div a{
         left: 0;
         top: 45%;
         text-decoration: none;
-        border-right: 1px solid #AB8763 ;
+        border-right: 1px solid var(--font-color);
         height: 10%;
     }
 }
@@ -255,17 +376,17 @@ nav div a{
         font-size: 1rem;
     }
     .main-img1{
-        border: solid #efe3d7;
+        border: solid var(--secondary-color) ;
         border-width: 15px 23px; 
     }
     .main-img2{
-        border: solid #efe3d7;
+        border: solid var(--secondary-color);
         border-width: 10px 20px; 
     }
     .blank{
         content: "";
         position: absolute;
-        background-color: #e0d9c7;
+        background-color: var(--main-color);
         z-index: -1;
     }
     .first-blank{
@@ -299,7 +420,13 @@ nav div a{
         opacity: 0;
         transform: rotate(180deg);
     }
-
+    .fancy{
+        font-family: var(--main-ft);
+        text-transform: uppercase;
+    }
+    .abt-ft{
+        font-family: var(--main-ft);
+    }
 } 
 /* before mobile */
 
@@ -344,7 +471,7 @@ main img.img-nonbordered{
     border-width: 0;
 }
 main img.img-nonbordered:hover{
-    border: solid #efe3d7;
+    border: solid var(--secondary-color);
     border-width:  20px 10px;
 }
 
