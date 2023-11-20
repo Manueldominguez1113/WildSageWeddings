@@ -40,50 +40,14 @@
 }
 @font-face {
     font-family: Cormorant;
-    src: url(assets/Fonts/Cormorant/static/Cormorant-Light.ttf);
-    font-weight: light;
-    font-style: normal;
-}
-@font-face {
-    font-family: Cormorant;
-    src: url(assets/Fonts/Cormorant/static/Cormorant-LightItalic.ttf);
-    font-weight: light;
-    font-style: italic;
-}
-@font-face {
-    font-family: Cormorant;
-    src: url(assets/Fonts/Cormorant/static/Cormorant-Medium.ttf);
-    font-weight: medium;
-    font-style: normal;
-}
-@font-face {
-    font-family: Cormorant;
-    src: url(assets/Fonts/Cormorant/static/Cormorant-MediumItalic.ttf);
-    font-weight: medium;
-    font-style: italic;
-}
-@font-face {
-    font-family: Cormorant;
-    src: url(assets/Fonts/Cormorant/static/Cormorant-SemiBold.ttf);
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: Cormorant;
-    src: url(assets/Fonts/Cormorant/static/Cormorant-SemiBoldItalic.ttf);
-    font-weight: bold;
-    font-style: italic;
-}
-@font-face {
-    font-family: Cormorant;
     src: url(assets/Fonts/Cormorant/static/Cormorant-Bold.ttf);
-    font-weight: bolder;
+    font-weight: bold;
     font-style: normal;
 }
 @font-face {
     font-family: Cormorant;
     src: url(assets/Fonts/Cormorant/static/Cormorant-BoldItalic.ttf);
-    font-weight: bolder;
+    font-weight: bold;
     font-style: italic;
 }
 
@@ -245,6 +209,9 @@ button,#learn, button .contactbtn{
     #portfolio{
         font-size: 1.8rem;
     }
+    #greetings .heading{
+        font-size: 6rem;
+    }
     .heading{
         font-size: 3rem;
     }
@@ -295,6 +262,9 @@ button,#learn, button .contactbtn{
     #portfolio{
         font-size: 10px;
     }
+    #greetings .heading{
+        font-size: 1.25rem;
+    }
     .heading{
         font-size: 1.25rem;
     }
@@ -313,7 +283,10 @@ button,#learn, button .contactbtn{
     #greetings{
         position: relative;
     }
-    p.heading{
+    #greetings .heading{
+        letter-spacing: 6.0px;
+    }
+    .heading{
         letter-spacing: 6.0px;
     }
     #paragraph1,#paragraph2{
@@ -356,7 +329,7 @@ button,#learn, button .contactbtn{
 
     .main-img1{
         border: solid var(--secondary-color);
-        border-width: 45px 30px; 
+        border-width: 20px  30px; 
     }
     .main-img2{
         border: solid var(--secondary-color);
@@ -374,6 +347,9 @@ button,#learn, button .contactbtn{
 }
 /* up to laptop */
  @media screen and (max-width: 768px) {
+    #greetings .heading{
+        font-size: 1.25rem;
+    }
     .heading{
         font-size: 1.25rem;
     }
@@ -409,6 +385,9 @@ button,#learn, button .contactbtn{
         border-bottom-left-radius: 10%;
         border-top-left-radius: 10%;
         right: 0;
+    }
+    #greetings .heading{
+        letter-spacing: 3px;
     }
     .heading{
         letter-spacing: 3px;
