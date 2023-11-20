@@ -126,7 +126,7 @@ nav div a{
 #btn{
     margin-bottom: 100px;
 }
-#learn{
+button,#learn, button .contactbtn{
     background-color: var(--btn-bg-color); 
     border: none;
     color: var(--btn-ft-color);
@@ -229,7 +229,15 @@ nav div a{
 .secondary-ft{
     font-family: var(--secondary-ft);
 }
-
+#contactImg{
+    background-image: url(assets/floral-table.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-y: -90%;
+    width: 100%;
+    height: 300px;
+    background-size: 100%;
+}
 @media screen and (min-width:2000px) {
     nav div a{
         font-size: 2rem;
@@ -426,6 +434,10 @@ nav div a{
     }
     .abt-ft{
         font-family: var(--main-ft);
+    }
+    #contactImg{
+        height: 150px;
+        background-position-y: 0;
     }
 } 
 /* before mobile */

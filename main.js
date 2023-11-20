@@ -53,3 +53,7 @@ document.querySelectorAll("#mNavMenu .navlink").forEach((ele)=>{
         openNav();  
     })
 })
+
+function toTop(){
+   window.scrollTo(0,0);
+}
