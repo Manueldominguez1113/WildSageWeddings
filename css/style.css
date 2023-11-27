@@ -1,0 +1,595 @@
+@font-face {
+    font-family: Overthink;
+    src: url(../assets/Fonts/Overthink/Overthink.ttf);
+}
+@font-face {
+    font-family: Kitchen;
+    src: url(../assets/Fonts/Simply-Kitchen/Simply\ Kitchen.ttf);
+}
+/* @font-face {
+    font-family: Allura;
+    src: url(../assets/Fonts/allura/Allura-Regular.ttf);
+} */
+@font-face {
+    font-family: Cantarell;
+    src: url(../assets/Fonts/Cantarell/Cantarell-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Cantarell;
+    src: url(../assets/Fonts/Cantarell/Cantarell-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: Cantarell;
+    src: url(../assets/Fonts/Cantarell/Cantarell-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Cantarell;
+    src: url(../assets/Fonts/Cantarell/Cantarell-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: Cormorant;
+    src: url(../assets/Fonts/Cormorant/static/Cormorant-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Cormorant;
+    src: url(../assets/Fonts/Cormorant/static/Cormorant-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: Cormorant;
+    src: url(../assets/Fonts/Cormorant/static/Cormorant-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Cormorant;
+    src: url(../assets/Fonts/Cormorant/static/Cormorant-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+:root{
+    --main-color: #fbfbf9;
+    --secondary-color: #184233;
+    --font-color:  #bf923a;
+    --font-color2:  #bf923a;
+    --btn-bg-color: #bf923a;
+    --btn-bg-color2: #785c23;
+    --btn-ft-color: white;
+    --cursive-ft: Overthink;
+    --cursive-ft2: Kitchen;
+    --main-ft: Cantarell;
+    --head-ft-size: 24px;
+    --p-ft-size: 16px;
+    --nav-ft-size:14px;
+    --secondary-ft: Cormorant;
+    --about-main-ft: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.main-color{
+    background-color: var(--main-color);
+}
+.second-color{
+    background-color: var(--secondary-color);
+}
+body{
+    color:var(--font-color);
+}
+#copyright a{
+    color: var(--font-color2);
+}
+nav div a{
+    position: relative;
+    text-decoration: none;
+    color: var(--font-color);
+}
+#email{
+    letter-spacing: 4px;
+}
+#btn{
+    margin-bottom: 100px;
+}
+button,#learn, button .contactbtn{
+    background-color: var(--btn-bg-color); 
+    border: none;
+    color: var(--btn-ft-color);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.25s;
+}
+button:hover, #learn:hover, button .contactbtn:hover{
+    background-color: var(--btn-bg-color2);
+}
+.navlink, #learn{
+    letter-spacing: 4px;
+    font-weight: 100;
+}
+.navlink:hover, #learn:hover{
+    font-weight: bold;
+}
+.third-blank{
+    height: 100%;
+    width: 72%;
+    border-bottom-left-radius: 10%;
+    border-top-left-radius: 10%;
+    right: 0;
+}
+#mNavMenu.closed-menu{
+    opacity: 0;
+    top: -30px;
+}
+#mNavMenu:not(.closed-menu){
+    top: 0;
+    left: 0;
+}
+#mNavMenu{
+    position: fixed;
+    transition: opacity .3s, top .2s;
+}
+#mNav{
+    z-index: 1031;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 1px solid var(--font-color);
+    border-bottom-right-radius: 10%;
+}
+.mNav-Logo{
+    height: auto;
+    width: 50%;
+}
+#mNavMenu .navbar-brand::after{
+    content: " ";
+    position: absolute;
+    left: 35%;
+    bottom: 0;
+    text-decoration: none;
+    border-bottom: 1px solid var(--font-color);
+    width: 30%;
+}
+.after-bar::after{
+    content: " ";
+    position: absolute;
+    left: 42.5%;
+    bottom: 0;
+    text-decoration: none;
+    border-bottom: 1px solid var(--font-color);
+    width: 15%;
+}
+#mNav img {
+    top: 0;
+    left: 0; 
+}
+#modal{
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    overflow: auto;
+    background-color: rgb(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#modal-content{
+    margin: auto;
+    text-align: center;
+}
+#modal-img{
+    max-width: 100%;
+    max-height: 100vh;
+    display: inline-flex;
+}
+
+#faded-img:before{
+        content: " ";
+        z-index: 10;
+        display: block;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+}
+.social-media{
+    transition: 0.25s;
+}
+.fancy{
+    font-family: var(--cursive-ft);
+}
+.fancy2{
+    font-family: var(--cursive-ft2);
+}
+.main-ft{
+    font-family: var(--main-ft);
+}
+.abt-ft{
+    font-family: var(--about-main-ft);
+}
+.secondary-ft{
+    font-family: var(--secondary-ft);
+}
+#contactImg{
+    background-image: url(../assets/webassets/floral-table.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-y: 40%;
+    width: 100%;
+    height: 300px;
+    background-size: 100%;
+}
+@media screen and (min-width:2000px) {
+    nav div a{
+        font-size: 2rem;
+    }
+    #portfolio{
+        font-size: 1.8rem;
+    }
+    #greetings .heading, h5.heading{
+        font-size: 6rem;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+    .p1{
+        font-size: 2.8rem;
+    }
+    .p2{
+        font-size: 2rem;
+    }
+    .social-media img{
+        width: 64px;
+        height: 64px;
+    }
+    .logo{
+        width: 557px;
+        height: 290px;
+    }
+}
+@media screen and (min-width:1150px) and (max-width:2000px){
+    nav div a{
+        font-size: 18px;
+    }
+    #portfolio{
+        font-size: 16px;
+     }
+    #greetings .heading, h5.heading{
+        font-size: 2.25rem;
+    }
+    .heading{
+        font-size: 1.25rem;
+    }
+    .p1{
+        font-size: 1.4rem;
+    }
+    .p2{
+        font-size: 1.4rem;
+    }
+    .logo{
+        width: 284px;
+        height: 145px;
+    }
+
+}
+@media screen and (min-width:768px) and (max-width: 1150px) {
+    nav div a{
+        font-size: 12px;
+    }
+    #portfolio{
+        font-size: 10px;
+    }
+    h5.heading{
+        font-size: 1.5rem;
+    }
+    #greetings .heading{
+        font-size: 1.25rem;
+    }
+    .heading{
+        font-size: 1.25rem;
+    }
+    .p1{
+        font-size: 1rem;
+    }
+    .p2{
+        font-size: 1rem;
+    }
+    .logo{
+        width: 284px;
+        height: 145px;
+    }
+}
+@media screen and (min-width:768px) and (max-width: 930px) {
+span#coordination.details{
+    font-size: 15px;
+  }  
+}
+@media screen and (min-width:768px){
+    #greetings{
+        position: relative;
+    }
+    #greetings .heading, h5.heading{
+        letter-spacing: 6.0px;
+    }
+    .heading{
+        letter-spacing: 6.0px;
+    }
+    #paragraph1,#paragraph2{
+        letter-spacing: 2px;
+    }
+    #paragraph1::after{
+        content: "";
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+    }
+    #card2{
+        letter-spacing: 1px;
+    }
+    #card2::after{
+        content: "";
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+    }
+    .blank{
+        content: "";
+        position: absolute;
+        background-color: var(--main-color);
+        z-index: -1;
+    }
+    .first-blank{
+        top: -10%;
+        left: 0;
+        height: 102%;
+        width: 100%;
+    }
+    .transition{
+    content: "";
+    position: absolute;
+    z-index: -1;    
+    background: rgb(251,251,249);
+    background: linear-gradient(180deg, rgba(251,251,249,1) 30%, rgba(24,66,51,1) 70%);
+    }
+    
+    .second-blank{
+        height: 47%;
+        width: 50%;
+        border-bottom-left-radius: 10%;
+        border-top-left-radius: 10%;
+        right: 0;
+    }
+
+    .main-img1{
+        border: solid var(--secondary-color);
+        border-width: 20px  30px; 
+    }
+    .main-img2{
+        border: solid var(--secondary-color);
+        border-width: 20px 40px; 
+    }
+    .navlink+.navlink::before{
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 45%;
+        text-decoration: none;
+        border-right: 1px solid var(--font-color);
+        height: 10%;
+    }
+}
+/* up to laptop */
+ @media screen and (max-width: 768px) {
+    #greetings .heading, h5.heading{
+        font-size: 1.25rem;
+    }
+    .heading{
+        font-size: 1.25rem;
+    }
+    .p1{
+        font-size: 1rem;
+    }
+    .p2{
+        font-size: 1rem;
+    }
+    .main-img1{
+        border: solid var(--secondary-color) ;
+        border-width: 15px 23px; 
+    }
+    .main-img2{
+        border: solid var(--secondary-color);
+        border-width: 10px 20px; 
+    }
+    .blank{
+        content: "";
+        position: absolute;
+        background-color: var(--main-color);
+        z-index: -1;
+    }
+    .first-blank{
+        top: -10%;
+        left: 0;
+        height: 130%;
+        width: 100%;
+    }
+    .second-blank{
+        height: 28%;
+        width: 75%;
+        border-bottom-left-radius: 10%;
+        border-top-left-radius: 10%;
+        right: 0;
+    }
+    #greetings .heading, h5.heading{
+        letter-spacing: 3px;
+    }
+    .heading{
+        letter-spacing: 3px;
+    }
+    #paragraph1, #paragraph2{
+        letter-spacing: 1.5px;
+    }
+    .nav-close{
+        opacity: 0;
+        rotate: -90deg;
+    }
+    .nav-burger{
+        position: absolute;
+        transition: opacity .2s, transform 1s;
+    }
+    .nav-close{
+        opacity: 0;
+        transform: rotate(180deg);
+    }
+    /* .fancy{
+        font-family: var(--main-ft);
+        text-transform: uppercase;
+    }
+    .fancy2{
+        font-family: var(--main-ft);
+        text-transform: uppercase;
+    } */
+    .abt-ft{
+        font-family: var(--main-ft);
+    }
+    #contactImg{
+        height: 150px;
+        background-position-y: 0;
+    }
+} 
+/* before mobile */
+
+@media screen and (min-width: 425px) and (max-width:768px){
+    .logo{
+        width: 284px;
+        height: 145px;
+    }
+
+}
+@media screen and (min-width: 575px) and (max-width:768px){
+    #mNav{
+        width: 91px;
+        height: 91px;
+    }
+}
+
+@media screen and (max-width:575px){
+    #mNav{
+        width: 68px;
+        height: 68px;
+    }
+} 
+@media screen and (max-width:425px){
+    .logo{
+        width: 159px;
+        height: 80px;
+    }
+}
+@media screen and (max-width:400px){
+    .mNav-Logo{
+        height: auto;
+        width: 70%;
+    }
+}
+@media screen and (max-width:350px){
+    span#coordination{
+        font-size: 18px;
+    }
+}
+
+main img.img-bordered:hover{
+    border: solid;
+    border-width: 0;
+}
+main img.img-nonbordered{
+    border: solid;
+    border-width: 0;
+}
+main img.img-nonbordered:hover{
+    border: solid var(--secondary-color);
+    border-width:  20px 10px;
+}
+
+main img.img-bordered, main img.img-nonbordered{
+    transition: 0.5s;
+}
+.social-media a:hover{
+    transform: scale(1.4);
+}
+/* details css */
+.contactbtn{
+    max-height: 65px;
+}
+.smallfont{
+    font-size: 1.1rem;
+}
+@media screen and (min-width:1400px) {
+    .top-half{
+        padding-bottom: 45%;
+        margin-bottom: -35%;
+    }   
+    .bottom-half{
+        min-height: 407px;
+    }
+    .contactbtn{
+        max-height: 130px;
+    }
+}
+@media screen and (min-width:767px) and (max-width:1399px) {
+    .top-half{
+        padding-bottom: 50%;
+        margin-bottom: -50%;
+    }
+    .bottom-half{
+        min-height: 200px;
+    }   
+}
+@media screen and (max-width:767px) {
+    .top-half{
+        padding-bottom: 5%;
+        margin-bottom: -5%;
+    }
+    .bottom-half{
+        min-height: 150px;
+    }   
+}
+
+/* portfolio css */
+.item {
+    background: #18423300;
+    padding: 0.5rem;
+    /* border: 1px solid #133328; */
+    width: 33%;
+    transition: 0.5s;
+    
+    &--sizer {
+      width: 25%;
+    }
+    &--is-invisible {
+        visibility: hidden;
+      }
+}
+.item:hover{
+    padding: 0.1rem;
+    /* border: 0; */
+}
+@media screen and (max-width:767px) {
+    .item {
+        padding:0.2rem;
+        width: 80%;
+    }
+}

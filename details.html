@@ -4,156 +4,207 @@
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="swup.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/swup.css">
      <link rel="shortcut icon" href="favicon.ico">
      <title>Wild Sage Details</title>
 </head>
-<body class="sage">
-    <nav class="navbar text-center darksage">
-        <div class="container-fluid px-md-3 py-0 position-relative secondary-ft">
-            <div id="mNav" class="col-2 d-md-none darksage">
-                <div class="d-sm-none">
-                    <img src="assets/icons8-nav.png" alt="navbar" class="nav-burger p-2" onclick="openNav()">
-                    <img src="assets/icons8-circled-x-50.png" alt="close navbar" class="nav-burger nav-close p-2" onclick="openNav()">
-                </div>
-                <div class="d-none d-sm-inline-block">  
-                    <img src="assets/icons8-nav-75.png" alt="navbar" class="nav-burger p-2" onclick="openNav()">
-                    <img src="assets/icons8-circled-x-75.png" alt="close navbar" class="nav-burger nav-close p-2" onclick="openNav()">
-                </div>
-            </div>
-            <a class="navlink px-md-2 py-md-5 col text-reset d-md-inline-block d-none " href="./index.html">HOME</a>
-            <a class="navlink px-md-2 py-md-5 col text-reset d-md-inline-block d-none " href="./about.html">ABOUT</a>
-            <a class="navlink px-md-2 py-md-5 col text-reset d-md-inline-block d-none " href="./details.html">DETAILS</a>
-            <a class="navbar-brand px-md-2 m-auto col-md-2 col-10 offset-1 offset-md-0 flex-md-fill" href="./index.html"><img src="assets/logo.png" alt="WildSageWeddingsLogo.png" class="logo" /></a>
-            <a class="navlink px-md-2 py-md-5 col text-reset d-md-inline-block d-none " href="./portfolio.html" id="portfolio">PORT<span class="d-md-inline-block">FOLIO</span></a>
-            <a class="navlink px-md-2 py-md-5 col text-reset d-md-inline-block d-none " href="./journal.html">JOURNAL</a>
-            <a class="navlink px-md-2 py-md-5 col text-reset d-md-inline-block d-none " href="./contact.html">CONNECT</a>
-            
-            <div id="mNavMenu" class="text-center d-md-none w-100 h-100 row row-cols-1 darksage closed-menu d-none">
-                <a class="navlink p-5 col-12 text-reset " href="./index.html">HOME</a>
-                <a class="navlink p-5 col-12 text-reset " href="./about.html">ABOUT</a>
-                <a class="navlink p-5 col-12 text-reset " href="./details.html">DETAILS</a>
-                <a class="navbar-brand p-3 order-first"href="./index.html" ><img src="assets/logo.png" alt="WildSageWeddingsLogo.png" class="mNav-Logo" /></a>
-                <a class="navlink p-5 col-12 text-reset " href="./portfolio.html" id="portfolio">PORT<span class="d-md-inline-block">FOLIO</span></a>
-                <a class="navlink p-5 col-12 text-reset " href="./journal.html">JOURNAL</a>
-                <a class="navlink p-5 col-12 text-reset " href="./contact.html">CONNECT</a>    
-            </div>
-        </div>
-    </nav>
-<div>
-    <div id="blank" class="darksage blank first-blank d-none d-sm-inline-block d-xl-none"></div>
-    <div id="blankL" class="darksage blank first-blank d-none d-xl-inline-block"></div>
-    <div id="blank2" class="darksage blank second-blank d-none d-md-inline-block d-xl-none"></div>
-    <div id="blank2L" class="darksage blank second-blank d-none d-xl-inline-block"></div>
-    <div id="blank3" class="darksage blank third-blank d-none d-sm-inline-block d-md-none"></div>
-    <div id="blankS" class="darksage blank first-blank d-sm-none"></div>
-    <div id="blank4" class="darksage blank second-blank d-inline-block d-sm-none" ></div>
+<body class="main-color">
+    <nav id="nav" class="navbar text-center main-color"></nav>
+<div class="d-none">
+    <div id="blank" class="main-color blank first-blank d-none d-sm-inline-block d-xl-none"></div>
+    <div id="blankL" class="main-color blank first-blank d-none d-xl-inline-block"></div>
+    <div id="blankS" class="main-color blank first-blank d-sm-none"></div>
+    <div class="d-none">
+        <div id="blank2" class="main-color blank second-blank d-none d-md-inline-block d-xl-none"></div>
+        <div id="blank2L" class="main-color blank second-blank d-none d-xl-inline-block"></div>
+        <div id="blank3" class="main-color blank third-blank d-none d-sm-inline-block d-md-none"></div>
+        <div id="blank4" class="main-color blank second-blank d-inline-block d-sm-none" ></div>
+    </div>
 </div>
 <main id="swup" class="transition-fade">
 <div id="modal" class="justify-content-center" onclick="closeModal()">
-    <div id="modal-content align-items-center ">
+    <div id="modal-content" class="align-items-center ">
         <img src="" alt="popup-image" id="modal-img"  onclick="closeModal()"/>
     </div>
 </div>
     
 <div id="greetings" class="row mx-0 p-0 p-md-3 justify-content-center align-items-end container-fluid mt-5">
     <div class="col-11 col-sm-10 d-grid justify-content-center col-md-6">
-        <img id="image1" class="img-fluid main-img1 img-bordered" src="assets/mcdaniels-1.jpg" alt="image1" onclick="popupImg(this)">
+        <img id="image1" class="img-fluid main-img1 img-bordered" src="assets/portfolio/mcdaniels-1.jpg" alt="image1" onclick="popupImg(this)">
     </div>
     <div class="col-lg-6 d-grid align-self-stretch col-12">
         <div class="row d-flex mt-lg-0 mt-5 align-items-center">
-            <p class="col-12 text-center heading fw-semibold fancy">Packages & Pricing</p>
-            <p id="paragraph1" class="col-10 offset-1 col-md-12 offset-md-0 px-md-5 mb-md-0 mb-5 text-center lh-lg fw-light p1 secondary-ft">Whether you need someone on the big day to make sure things run smoothly or expert advice and guidance from the very beginning and all the way through, I'm your girl! I have several package options as well as custom packages that can be tailored to your needs.</p>
-            <button id="learn" class="col-6 offset-3 p1 secondary-ft mb-5 d-none d-md-inline-block" onclick="window.location.href='./details.html'">learn more</button>
+            <div class="main-color m-auto col-10 pt-3 mb-md-4 mb-5">
+                <p class="col-12 text-center heading fancy">Packages & Pricing</p>
+                <p id="paragraph1" class="col-10 offset-1 col-md-12 offset-md-0 px-md-5 mb-md-0 mb-5 text-center lh-lg fw-light p1 secondary-ft">Whether you need someone on the big day to make sure things run smoothly or expert advice and guidance from the very beginning and all the way through, I'm your girl! I have several package options as well as custom packages that can be tailored to your needs.</p>
+            </div>
+            <button id="learn" class="col-6 offset-3 p1 secondary-ft mb-5 d-none d-md-inline-block" onclick="scrollDown()">learn more</button>
             <div class="col-12 order-first order-md-last d-md-flex align-self-md-end mb-5 mb-md-0 mt-3 mt-md-0">
                 <div class="row justify-content-center">
                     <div class="col-12">
-                        <img src="assets/buttrams-51.jpg" alt="image2" class="img-fluid img-bordered main-img2" onclick="popupImg(this)">
+                        <img src="assets/portfolio/buttrams-51.jpg" alt="image2" class="img-fluid img-bordered main-img2" onclick="popupImg(this)">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div> 
-<div class="container-fluid text-center justify-content-between row">
-    <div class="d-grid col-md-4 col-12 mt-md-5 mt-3 lh-lg">
-        <div class="row align-items-start justify-content-center">
-            <div class="col-md-12 col-6">
-                <img src="assets/buttramdetails-19.jpg" alt="image2" class="rounded img-fluid img-nonbordered main-img2" onclick="popupImg(this)">
+
+<div class="container-fluid text-center second-color pt-3 pt-md-0 mt-md-4 mt-3">
+    <div class="row">
+        <div class="col-md-4 col-12 mt-md-5 mt-3 lh-lg order-first">
+            <img src="assets/webassets/buttramdetails-19.jpg" alt="image2" class="col-md-12 col-6 rounded img-fluid img-nonbordered main-img2" onclick="popupImg(this)">
+            <div class="main-color rounded-top top-half">
+                <p id="MoC" class="heading fancy col-10 offset-1 pd-5 pt-5 mt-5 mx-auto fw-semibold">
+                    <span class="d-md-inline-block">MONTH</span> <span class="d-md-inline-block">OF</span> <span id="coordination" class="details d-md-inline-block">COORDINATION</span>
+                </p>
+                <p id="paragraph2" class="col-11 mx-auto secondary-ft px-5 pb-2 pb-md-5 pt-3 p-md-0 mb-0 fw-light p1 mt-sm-5">
+                    Month of coordination is for the couples who have booked all their vendors but need assistance tying up loose ends. We finalize last details, create the wedding day timeline, take charge for the day of to ensure all you have to do is show up and say I do.  
+                </p>
             </div>
         </div>
-        <p class="heading main-ft col-10 offset-1 px-5 pd-5 pt-0 pt-md-5 mt-5 fw-semibold">
-            <span class="d-md-inline-block">MONTH</span> <span class="d-md-inline-block">OF</span> <span class="d-md-inline-block">COORDINATION</span>
-        </p>
-        <div id="paragraph2" class="secondary-ft px-5 pb-2 pb-md-5 pt-3 p-md-0 fw-light p1">
-            Month of coordination is for the couples who have booked all their vendors but need assistance tying up loose ends. We finalize last details, create the wedding day timeline, take charge for the day of to ensure all you have to do is show up and say I do.  
+        <div class="row row-cols-1 justify-content-center mb-5 mx-auto order-2 order-md-4 col-md-4 col-12 lh-lg"> 
+            <div class="main-color rounded-bottom bottom-half row">
+                <div class="align-items-start">
+                    <div id="p1" class="mb-0 mt-0 mx-auto col secondary-ft px-1 pb-0 pt-3 p-md-0 fw-light p1">
+                        <button class="contactbtn col-6 p1 rounded" type="button" data-bs-toggle="collapse" data-bs-target="#more1" aria-expanded="false" aria-controls="collapseExample">
+                            More Details
+                          </button>
+                          <div class="collapse" id="more1">
+                            <ul class="col-11 mt-5 mx-auto">
+                                <li>Up to 5 coordinator/Client [1 hour] meetings</li>
+                                <li>Up to one hour rehearsal direction</li>
+                                <li>Finalizing details with vendors</li>
+                                <li>Overseeing setup and arrangements at the venue*</li> 
+                                <li>Wedding timeline creation and management</li>
+                                <li>Troubleshooting any issues that arise</li>
+                                <li>Up to 10 hours of on-the-day-coordination</li>
+                                <li>Ceremony clean up*</li>
+                                <li>Up to 2 venue tours</li>
+                                <li>Up to 2 coordination/client/vendor [1 hour] meetings</li>
+                                <li>Unlimited contact via email</li>
+                                <li>Wedding planning checklist</li>
+                                <li>Access to Wedding Day Emergency Kit</li> 
+                                <p class="smallfont mt-5">*We do not set up or tear down tables</p>
+                            </ul>
+                          </div>
+                    </div>
+                </div>
+                <div class="align-items-end">
+                <div id="price1" class="mb-md-5 mb-0 mt-5 mx-auto col-md-6 secondary-ft col-10 offset-1 px-5 pb-5 pt-3 p-md-0 fw-light p1">
+                    Starting price is: <br> $750
+                </div>
+                </div>
+            </div>
+                <button id="learn1" class="contactbtn my-5 col-8 p1 secondary-ft" onclick="window.location.href='./contact.html'">Contact Us</button>    
         </div>
-        <div id="price1" class="mt-md-3 col-md-6 offset-md-3 secondary-ft col-10 offset-1 px-5 pb-5 pt-3 p-md-0 fw-light p1">
-            Starting price is: <br> $750
-        </div>
-        <div class="d-flex align-items-end container-fluid mb-5 mb-md-0 justify-content-center">
-            <button id="learn1" class="contactbtn col-8 p1 secondary-ft" onclick="window.location.href='./contact.html'">Contact Us</button>
-        </div>
-    </div>
-    <div class="d-grid col-md-4 col-12 mt-md-5 mt-3 lh-lg">
-        <div class="row align-items-start justify-content-center">
-            <div class="col-md-12 col-6">
-                <img src="assets/buttramdetails-20.jpg" alt="image2" class="rounded img-fluid img-nonbordered main-img2" onclick="popupImg(this)">
+        <div class="col-md-4 col-12 mt-md-5 mt-3 lh-lg order-md-2 order-3">
+            <img src="assets/webassets/buttramdetails-20.jpg" alt="image2" class="col-md-12 col-6 rounded img-fluid img-nonbordered main-img2" onclick="popupImg(this)">
+            <div class="main-color rounded-top top-half">
+                <p class="heading mt-md-5 col-10 fancy offset-1 pd-md-5 pb-sm-5 pt-5 mt-5 mx-auto fw-semibold">
+                    <span class="d-md-inline-block">PARTIAL</span> <span class="d-md-inline-block">PLANNING</span>
+                </p>
+                <p id="paragraph2" class="col-11 mx-auto secondary-ft px-5 pb-2 pb-lg-5 pt-3 p-md-0 fw-light p1 mt-0 mt-md-5">
+                    Partial planning is for couples who have a good start to creating their wedding but need assistance and guidance. We assist with decor design and helping you select your last few vendors. 
+                </p>
             </div>
         </div>
-        <p class="heading mt-md-5 col-10 main-ft offset-1 px-5 pd-5 pt-0 mt-5 pt-md-5 fw-semibold">
-            <span class="d-md-inline-block">PARTIAL</span> <span class="d-md-inline-block">PLANNING</span>
-        </p>
-        <div id="paragraph2" class="secondary-ft px-5 pb-2 pb-md-5 pt-3 p-md-0 fw-light p1">
-            Partial planning is for couples who have a good start to creating their wedding but need assistance and guidance. We assist with decor design and helping you select your last few vendors. 
+        <div class="row row-cols-1 justify-content-center mb-5 mx-auto order-4 order-md-5 col-md-4 col-12 lh-lg">
+            <div class="main-color rounded-bottom bottom-half row">
+                <div class="align-items-start">
+                    <div id="p2" class=" mb-0 mt-0 mx-auto secondary-ft col px-1 pb-0 pt-3 p-md-0 fw-light p1">
+                        <button class="contactbtn rounded col-6 p1" type="button" data-bs-toggle="collapse" data-bs-target="#more2" aria-expanded="false" aria-controls="collapseExample">
+                            More Details
+                          </button>
+                          <div class="collapse" id="more2">
+                                <ul class="col-11 mt-5 mx-auto">
+                                    <li>Up to 8 planner/client [1 hour] meetings</li>
+                                    <li>Up to one hour rehearsal direction</li>
+                                    <li>Up to 10 Planner/Client/vendor meetings</li>
+                                    <li>Up to 4 venue tours</li>
+                                    <li>Unlimited contact via email</li>
+                                    <li>Wedding planning checklist</li>
+                                    <li>Wedding timeline creation and management</li>
+                                    <li>Vendor recommendations and coordination for specific services</li>
+                                    <li>Assistance with décor and theme planning</li>
+                                    <li>Up to 10 hours of on-the-day coordination</li>
+                                    <li>Setup of décor and arrangements at the venue*</li>
+                                    <li>Oversee clean up of décor</li>
+                                    <li>Access to Wedding Day Emergency Kit</li>
+                                    <p class="smallfont mt-5">*We do not set up or tear down tables</p>
+                                </ul>
+                          </div>
+                    </div>
+                </div>
+                <div class="align-items-end">
+                    <div id="price2" class="mb-md-5 mb-0 mt-5 mx-auto col-md-6 secondary-ft col-10 offset-1 px-5 pb-5 pt-3 p-md-0 fw-light p1">
+                        Starting price is: <br> $1300
+                    </div>
+                </div>
+            </div>
+                <button id="learn2" class="contactbtn my-5 col-8 p1 secondary-ft" onclick="window.location.href='./contact.html'">Contact Us</button>
         </div>
-        <div id="price2" class="mt-md-3 col-md-6 offset-md-3 secondary-ft col-10 offset-1 px-5 pb-5 pt-3 p-md-0 fw-light p1">
-            Starting price is: <br> $1300
-        </div>
-        <div class="d-flex align-items-end container-fluid mb-5 mb-md-0 justify-content-center">
-            <button id="learn2" class="contactbtn col-8 p1 secondary-ft" onclick="window.location.href='./contact.html'">Contact Us</button>
-        </div>
-    </div>
-    <div class="d-grid col-md-4 col-12 mt-md-5 mt-3 lh-lg">
-        <div class="row align-items-start justify-content-center">
-            <div class="col-md-12 col-6">
-                <img src="assets/buttramdetails-15.jpg" alt="image2" class="rounded img-fluid img-nonbordered main-img2" onclick="popupImg(this)">
+
+        <div class="col-md-4 col-12 mt-md-5 mt-3 lh-lg order-5 order-md-3">
+            <img src="assets/webassets/buttramdetails-15.jpg" alt="image2" class="col-md-12 col-6 rounded img-fluid img-nonbordered main-img2" onclick="popupImg(this)">
+            <div class="main-color rounded-top top-half">
+                <p class="heading col-10 fancy offset-1 pd-5 pt-5 mt-5 mx-auto fw-semibold">
+                   <span class="d-md-inline-block">FULL</span> <span class="d-md-inline-block">SERVICE</span> <span class="d-md-inline-block">PLANNING</span>
+                </p>
+                <p id="paragraph2" class="col-11 m-auto secondary-ft px-5 pb-2 pb-md-5 pt-3 p-md-0 fw-light p1 mt-sm-5">
+                    For the couple who wants to breeze through their engagement and let someone else take the reigns in creating their perfect day! From decor design to selecting all vendors, you will get to sit back and enjoy the ride. 
+                </p>
             </div>
         </div>
-        <p class="heading col-10 main-ft offset-1 px-5 pd-5 pt-0 pt-md-5 mt-5 fw-semibold">
-           <span class="d-md-inline-block">FULL</span> <span class="d-md-inline-block">SERVICE</span> <span class="d-md-inline-block">PLANNING</span>
-        </p>
-        <div id="paragraph2" class="secondary-ft px-5 pb-2 pb-md-5 pt-3 p-md-0 fw-light p1">
-            For the couple who wants to breeze through their engagement and let someone else take the reigns in creating their perfect day! From decor design to selecting all vendors, you will get to sit back and enjoy the ride. 
-        </div>
-        <div id="price3" class="mt-md-3 col-md-6 offset-md-3 secondary-ft col-10 offset-1 px-5 pb-5 pt-3 p-md-0 fw-light p1">
-            Starting price is: <br> $3000
-        </div>
-        <div class="d-flex align-items-end mb-5 mb-md-0 container-fluid justify-content-center">
-            <button id="learn3" class="contactbtn col-8 p1 secondary-ft" onclick="window.location.href='./contact.html'">Contact Us</button>
+        <div class="row row-cols-1 justify-content-center mb-5 mx-auto order-last col-md-4 col-12 lh-lg">
+            <div class="main-color rounded-bottom bottom-half row">        
+                <div class="align-items-start">
+                    <div id="p3" class=" mb-0 mt-0 mx-auto secondary-ft col px-1 pb-0 pt-3 p-md-0 fw-light p1">
+                        <button class="contactbtn rounded col-6 p1" type="button" data-bs-toggle="collapse" data-bs-target="#more3" aria-expanded="false" aria-controls="collapseExample">
+                            More Details
+                          </button>
+                          <div class="collapse" id="more3">
+                                <ul class="col-11 mt-5 mx-auto">
+                                    <li>Up to 15 planner/client [1 hour] meetings</li>
+                                    <li>Up to 15 planner/client/vendor [1 hour] meetings</li>
+                                    <li>Up to 6 venue tours</li>
+                                    <li>Unlimited contact via email</li>
+                                    <li>Wedding planning checklist</li>
+                                    <li>Budget management</li>
+                                    <li>Wedding invitation assistance and management</li>
+                                    <li>Wedding timeline creation and management</li>
+                                    <li>Décor and theme planning</li>
+                                    <li>Up to one hour of rehearsal direction</li>
+                                    <li>Up to 12 hours of on-the-day-coordination</li>
+                                    <li>Clean up of décor*</li>
+                                    <li>Access to wedding day emergency kit</li>
+                                    <p class="smallfont mt-5">*We do not set up or tear down tables</p>
+                                </ul>
+                          </div>
+                    </div>
+                </div>
+                <div class="align-items-end">
+                <div id="price3" class="mb-md-5 mb-0 mt-5 mx-auto col-md-6 secondary-ft col-10 offset-1 px-5 pb-5 pt-3 p-md-0 fw-light p1">
+                    Starting price is: <br> $3000
+                </div>
+                </div>
+            </div>
+                <button id="learn3" class="contactbtn my-5 col-8 p1 secondary-ft" onclick="window.location.href='./contact.html'">Contact Us</button>
         </div>
     </div>
 </div>
 
 </main>
 
-<footer class="pt-3 pd-0 px-3 text-center row align-items-center justify-content-between darksage" style="margin: auto;">
-        <div class="col-md-4 col-12 order-2 order-md-1">
-            <div id="social-media" class="row justify-content-md-center justify-content-center mt-md-0 mt-3">
-                <a class="col-3 p-3" href="https://www.facebook.com/profile.php?id=100076736864461"><img src="assets/icons8-facebook.png" alt="facebook"></a>
-                <a class="col-3 p-3" href="https://www.instagram.com/wildsage_weddings/?fbclid=IwAR1fjMeeVuYH8a0QWqKTycbuHPPsziO9-oVBhXkNJlyv_3xZxroVF0e_hmo"><img src="assets/icons8-instagram.png" alt="instagram"></a>
-                <a class="col-3 p-3" onclick="toTop()"><img src="assets/icons8-up-arrow.png" alt="back to top"></a>            </div>
-        </div>    
-        <img src="assets/logo.png" alt="logo" class="img-fluid col-md-3 col-12 p-md-5 px-5 order-1 order-md-2">
-        <div id="email" class="col-md-4 col-12 text-break order-3 my-5 p1"><span class="d-inline-block">INFO</span><span class="d-inline-block">@WILDSAGE</span><span class="d-inline-block">WEDDINGS</span><span class="d-inline-block">.COM</span></div>
-</footer>
-<div id="copyright" class="col-12 order-last sage text-center p2"><span class="d-inline-block d-md-none">&#8226</span> Site designed by <a href="https://manueldominguez1113.github.io/" class="text-reset"> Manuel Dominguez</a> <br class="d-inline-block d-md-none">&#8226 Images courtesy/copyright of <a href="https://alyssaspiveyphoto.com/" class="text-reset">Alyssa Spivey Photography</a> <br class="d-inline-block d-md-none"> &#8226 Icons by <a target="_blank" href="https://icons8.com" class="text-reset">Icons8</a></div>
+<footer id="footer" class="pt-3 pd-0 px-3 text-center row align-items-center justify-content-between main-color" style="margin: auto;"></footer>
 
-    <script src="https://unpkg.com/swup@4"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script src="swup.js"></script>
-    <script src="main.js"></script>
+<script src="https://unpkg.com/swup@4"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+<script src="js/swup.js"></script>
 </body>
 </html>

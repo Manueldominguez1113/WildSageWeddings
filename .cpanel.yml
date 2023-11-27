@@ -3,15 +3,9 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/wildsage/public_html/ 
     - bin/cp -R assets $DEPLOYPATH
-    - bin/cp swup.js $DEPLOYPATH
+    - bin/cp -R css $DEPLOYPATH
+    - bin/cp -R js $DEPLOYPATH
+    - bin/cp -R pages $DEPLOYPATH
     - bin/cp 404.html $DEPLOYPATH
-    - bin/cp about.html $DEPLOYPATH
-    - bin/cp contact.html $DEPLOYPATH
-    - bin/cp details.html $DEPLOYPATH
     - bin/cp favicon.ico $DEPLOYPATH
     - bin/cp index.html $DEPLOYPATH
-    - bin/cp journal.html $DEPLOYPATH
-    - bin/cp main.js $DEPLOYPATH
-    - bin/cp portfolio.html $DEPLOYPATH
-    - bin/cp style.css $DEPLOYPATH
-    - bin/cp swup.css $DEPLOYPATH
