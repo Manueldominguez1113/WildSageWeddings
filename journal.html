@@ -24,19 +24,21 @@
     </div>
 </div>
 <main id="swup" class="transition-fade">
-<div id="modal" class="container-fluid justify-content-center row row-cols-1">
-    <div id="modal-content" class="col-11 main-color">
-        <div id="modal-title" class="heading fancy">
+<div id="modal" class="container-fluid m-0 p-1 px-sm-5 pt-1 justify-content-center row row-cols-1 ">
+    <div id="modal-content" class="text col-12 p-0 px-md-5 pt-md-5 pb-1 mx-0 main-color transitionable">
+        <div id="modal-title" class="heading fancy py-2">
             TITLE:
 
         </div>
-        <div id="modal-date" class="main-ft p1">
+        <div id="title-sep"></div>
+        <div id="modal-date" class="main-ft p1 py-2">
             DATE:
         </div>
-        <div id="modal-text" class="main-ft p1">
+        <div id="date-sep"></div>
+        <div id="modal-text" class="main-ft p1 py-2 px-4 px-sm-0 mb-5 overflow-auto">
             CONTENT:
         </div>
-        <button class="contactbtn main-ft p1" onclick="closeTextModal()">Close</button>
+        <button class="contactbtn main-ft p1 rounded" onclick="closeTextModal(true)">Close</button>
     </div>
 </div>
     
@@ -47,14 +49,14 @@
         </div>
     </div>
 </div> 
-<div id="card2" class="text-center mt-md-5 mt-3 lh-lg">
+<div id="card2" class="text-center mt-md-5 mt-3 second-color pt-2 pt-md-5 lh-lg">
     <div id="journal" class="container-fluid">
             COMING SOON
     </div>
 </div>
 </main>
 
-<footer id="footer" class="pt-3 pd-0 px-3 text-center row align-items-center justify-content-between main-color" style="margin: auto;"></footer>
+<footer id="footer" class="pt-3 pd-0 px-3 text-center row align-items-center justify-content-between main-color mx-auto"></footer>
 
 <script src="https://unpkg.com/swup@4"></script>
 <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>

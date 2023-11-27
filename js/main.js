@@ -44,8 +44,7 @@ function openNav(){
     document.getElementById("mNav").querySelectorAll(".nav-burger").forEach(function(i){
         i.classList.toggle("nav-close")
     });
-// nav wont close on mobile. seems to reopen after clicking link? commenting out the opennav to everything didnt fix. so maybe
-// something below is being reopen/closed improper
+
     if(navmenu.classList.contains("d-none")){
         navToggle;
         navmenu.classList.toggle("d-none");       
@@ -110,8 +109,8 @@ function toTop(){
     html+='        <a onclick="openNav()" class="navlink py-3 col-12 text-reset " href="./journal.html">JOURNAL</a>';
     html+='        <a onclick="openNav()" class="navlink pt-3 pb-5 col-12 text-reset after-bar" href="./contact.html">CONNECT</a>';
     html+='        <div id="social-media" class="social-media navlink py-5 py-sm-4 mt-sm-1 col-12">';
-    html+='            <a class="p-3 py-sm-4 px-sm-5 me-1 me-sm-0" href="https://www.facebook.com/profile.php?id=100076736864461"><img src="assets/webassets/icons8-facebook.png" alt="facebook"></a>';
-    html+='            <a class="p-3 py-sm-4 px-sm-5 ms-1 ms-sm-0" href="https://www.instagram.com/wildsage_weddings/?fbclid=IwAR1fjMeeVuYH8a0QWqKTycbuHPPsziO9-oVBhXkNJlyv_3xZxroVF0e_hmo"><img src="assets/webassets/icons8-instagram.png" alt="instagram"></a>';
+    html+='            <a class="p-3 py-sm-4 px-sm-5 me-1 me-sm-0" href="https://www.facebook.com/profile.php?id=100076736864461" target="_blank"><img src="assets/webassets/icons8-facebook.png" alt="facebook"></a>';
+    html+='            <a class="p-3 py-sm-4 px-sm-5 ms-1 ms-sm-0" href="https://www.instagram.com/wildsage_weddings/?fbclid=IwAR1fjMeeVuYH8a0QWqKTycbuHPPsziO9-oVBhXkNJlyv_3xZxroVF0e_hmo" target="_blank"><img src="assets/webassets/icons8-instagram.png" alt="instagram"></a>';
     html+='        </div>';
     html+='    </div>';
     html+='</div>';
@@ -128,8 +127,8 @@ function toTop(){
     html+= '</div>';
     html+= "<div class='col-md-4 col-12 order-2 order-md-1'>";
     html+= "<div id='social-media' class='social-media row justify-content-md-center justify-content-center mt-md-0 mt-3'>";
-    html+= "    <a class='col-3 p-3' href='https://www.facebook.com/profile.php?id=100076736864461'><img src='assets/webassets/icons8-facebook.png' alt='facebook'></a>";
-    html+= "    <a class='col-3 p-3' href='https://www.instagram.com/wildsage_weddings/?fbclid=IwAR1fjMeeVuYH8a0QWqKTycbuHPPsziO9-oVBhXkNJlyv_3xZxroVF0e_hmo'><img src='assets/webassets/icons8-instagram.png' alt='instagram'></a>";
+    html+= "    <a class='col-3 p-3' href='https://www.facebook.com/profile.php?id=100076736864461'  target='_blank'><img src='assets/webassets/icons8-facebook.png' alt='facebook'></a>";
+    html+= "    <a class='col-3 p-3' href='https://www.instagram.com/wildsage_weddings/?fbclid=IwAR1fjMeeVuYH8a0QWqKTycbuHPPsziO9-oVBhXkNJlyv_3xZxroVF0e_hmo'  target='_blank'><img src='assets/webassets/icons8-instagram.png' alt='instagram'></a>";
     html+= "    <a class='col-3 p-3' onclick='toTop()'><img src='assets/webassets/icons8-up-arrow.png' alt='back to top'></a>            </div>";
     html+= "</div>    ";
     html+= "<img src='assets/webassets/logo(2).png' alt='logo' class='img-fluid col-md-3 col-12 p-md-3 px-5 order-1 order-md-2'>" ;
@@ -144,11 +143,20 @@ function toTop(){
 
 function openTextModal(fileName){
     var modal=document.getElementById("modal");
+    var modalContainer= document.getElementById("modal-content");
     var title= document.getElementById("modal-title");
     var date= document.getElementById("modal-date");
     var content= document.getElementById("modal-text");
+    var card= document.getElementById(fileName);
 
-    modal.style.display="flex";
+    card.classList.toggle("open-card");
+    setTimeout(()=>{
+        modal.style.display="flex";
+    }, 250);
+    setTimeout(()=>{
+        modalContainer.classList.add("card-fade-in");
+    }, 300);
+
 
     $.get('/assets/blog/list.json').done((data) => {
         
@@ -156,7 +164,7 @@ function openTextModal(fileName){
             if(entry.fileName==fileName){        
                 var folder = "/assets/blog/";
                 var text = importText(folder+entry.fileName);
-
+                text = text.replace(/\n/g, "<br>");
                 title.innerHTML=entry.title;
                 date.innerHTML=entry.date;
                 content.innerHTML=text;
@@ -165,18 +173,26 @@ function openTextModal(fileName){
         })
     })
 } 
-function closeTextModal(){
+function closeTextModal(bool){
     var modal=document.getElementById("modal");
+    var modalContainer= document.getElementById("modal-content");
     var title= document.getElementById("modal-title");
     var date= document.getElementById("modal-date");
     var content= document.getElementById("modal-text");
-
     var spinner='<div id="load" class="spinner-border" role="status"><span class="visually-hidden">Content is Loading...</span></div>';
     
-    modal.style.display="none";
-    title.innerHTML="Title "+spinner;
-    date.innerHTML="Date: "+spinner;
-    content.innerHTML="Content: "+spinner;
+    if(bool){
+    modalContainer.classList.remove("card-fade-in");
+    setTimeout(()=>{
+        modal.style.display="none";
+        document.querySelector(".open-card").classList.remove("open-card");
+        title.innerHTML="Title "+spinner;
+        date.innerHTML="Date: "+spinner;
+        content.innerHTML="Content: "+spinner;    
+    },250);
+    }   
+
+
 }
 
 
@@ -247,12 +263,17 @@ function portfolio(){
 }
 
 function journal(){
-    closeTextModal();
+    closeTextModal(false);
+    var journal= document.getElementById('journal');
 
     $.get('/assets/blog/list.json').done((data) => {
         var html=""
         var number=0;
-        
+        if(data.length==0){
+            html="COMING SOON!"
+            journal.innerHTML= html;
+            return;
+        }                
         data.reverse().forEach((entry)=>{
             var folder = "/assets/blog/";
             var text = importText(folder+entry.fileName);
@@ -260,9 +281,9 @@ function journal(){
             var smallTitle= entry.title.substring(0,25);
 
             if(number==0){
-                html+='<div class="container-fluid mb-5">';
-                html+='<div class="card text-center p-0">';
-                html+='  <div class="card-header p1">';
+                html+='<div class="container-fluid row mx-auto p-0 position-relative mb-5">';
+                html+='<div class="card border-warning text-center p-0 transitionable" id="'+entry.fileName+'">';
+                html+='  <div class="card-header main-ft fw-bold p1">';
                 html+='    Featured';
                 html+='  </div>';
                 html+='  <div class="card-body">';
@@ -288,8 +309,8 @@ function journal(){
                     html+='<div class="row row-cols-md-3 row-cols-1 mx-auto px-2 pb-5 g-2 pt-3 justify-content-center">';
                 }
 
-                html+='<div class="col-12 col-sm-6 col-md-4 col-lg-3">';
-                html+='<div class="card text-center p-0">';
+                html+='<div class="col-12 col-sm-6 col-md-4 col-lg-3 position-relative">';
+                html+='<div class="card border-warning text-center p-0 transitionable" id="'+entry.fileName+'">';
                 html+='  <div class="card-body">';
                 html+='    <h5 class="card-title heading fancy">'+smallTitle;
                 if(entry.title.length>25){
@@ -309,7 +330,6 @@ function journal(){
             }
             number++;
         })
-        var journal= document.getElementById('journal');
         journal.innerHTML= html; 
         if(number>1){
             journal.innerHTML+='</div>';

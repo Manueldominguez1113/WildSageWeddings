@@ -138,6 +138,7 @@ button:hover, #learn:hover, button .contactbtn:hover{
 #mNavMenu{
     position: fixed;
     transition: opacity .3s, top .2s;
+    z-index: 1000;
 }
 #mNav{
     z-index: 1031;
@@ -196,7 +197,7 @@ button:hover, #learn:hover, button .contactbtn:hover{
     display: inline-flex;
 }
 
-#faded-img:before{
+/* #faded-img:before{
         content: " ";
         z-index: 10;
         display: block;
@@ -206,7 +207,7 @@ button:hover, #learn:hover, button .contactbtn:hover{
         left: 0;
         right: 0;
         background: rgba(0, 0, 0, 0.5);
-}
+} */
 .social-media{
     transition: 0.25s;
 }
@@ -592,4 +593,37 @@ main img.img-bordered, main img.img-nonbordered{
         padding:0.2rem;
         width: 80%;
     }
+}
+/* journal css */
+#modal-text{
+    max-height: 65vh;
+}
+#modal-content.text{
+    border: 3px solid var(--btn-bg-color);
+}
+
+#title-sep, #date-sep{
+    content: " ";
+    position: absolute;
+    border-bottom: 1px solid var(--font-color);
+    
+}
+#title-sep{
+    left: 40%;
+    width: 20%;
+}
+#date-sep{
+    left:45%;
+    width: 10%;
+}
+.transitionable{
+    transition: 0.25s;
+}
+.open-card{
+    position: absolute;
+    transform: scale(2);
+    z-index: 10;
+}
+#modal-content:not(.card-fade-in){
+    transform: scale(0.5);
 }

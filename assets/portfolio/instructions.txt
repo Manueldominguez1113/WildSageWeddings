@@ -1,0 +1,46 @@
+Steps for adding photos into your portfolio!
+
+step 1:
+    upload your images in any format here, in this folder, on the cpanel!
+
+Step 2:
+    update the list.json to include your file!
+
+example(the list.json should look like this...):
+
+[
+    {
+        "fileName":"photo-1.jpg"
+    },
+    {
+        "fileName":"photo_2.jpg"
+    },
+    {
+        "fileName":"photo3.png"
+    }
+]
+
+
+you can continue to add files until you run out of storage space on the website!
+
+just make sure of 4 things in the list.json:
+
+1. the entire list of photos are contained within ONE []
+2. each blog info is contained in a {}  and separated from the next post by a ,
+3. make sure there is nothing in between the [] and the FIRST and LAST entry in the list(notice in example the start is [{ and the end is }])
+4. in FileName, please put the exact name of the file, and when naming files in general: try not to use spaces, / or \ in filenames("my blog/1" is a no go!)
+
+
+
+extra tip:  make sure to not duplicate file names in your list. this will not cause any critical errors, but you will link to the same file twice, which you could expect it mess up the webpage a bit until resolved.
+
+extra-extra tip: the spacing in the list.json DOES NOT MATTER! it's only spaced in such a way to be easier to read and add new posts!
+
+Also good to know: I reversed it's order, so now as you add posts under the previous entry in the list, the website will understand and post your latest entries to the front of the page, and push your older posts further down the page!
+
+you can copy this to append a new post to the list:
+
+    ,
+    {
+        "fileName":"name-of-file.jpg"
+    }
